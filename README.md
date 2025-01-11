@@ -98,11 +98,17 @@ After generating the keys, replace the placeholder keys in the project code with
 
 ## Screenshots
 
-  ![First]((https://github.com/SagarRB123/Medical-Emergency-Handling/blob/main/Page1.png?raw=true))
+  ![First](https://github.com/SagarRB123/Medical-Emergency-Handling/blob/main/Page1.png?raw=true)
 
-  ![Second](screenshots/find_hospitals.png)
+  ![Second](https://github.com/SagarRB123/Medical-Emergency-Handling/blob/main/Page2.png?raw=true)
 
-  ![Third](screenshots/first_aid.png)
+  ![Third](https://github.com/SagarRB123/Medical-Emergency-Handling/blob/main/Gray%20Simple%20Shapes%20Blank%20A4%20Document%20Landscape.gif?raw=true)
+
+  ![Fourth](https://github.com/SagarRB123/Medical-Emergency-Handling/blob/main/Page4.png?raw=true)
+
+  ![Fifth](https://github.com/SagarRB123/Medical-Emergency-Handling/blob/main/Page5.png?raw=true)
+
+  ![Sixth](https://github.com/SagarRB123/Medical-Emergency-Handling/blob/main/Page6.png?raw=true)
 
 ---
 
@@ -132,7 +138,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 For queries or suggestions, please contact:
-- **Email**: sagarrb123@example.com
+- **Email**: biradarsagar2004@gmail.com
 - **GitHub**: [SagarRB123](https://github.com/SagarRB123)
 
 ---
