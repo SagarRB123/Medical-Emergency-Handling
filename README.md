@@ -97,16 +97,12 @@ After generating the keys, replace the placeholder keys in the project code with
 ---
 
 ## Screenshots
-Add screenshots to showcase the app's features and interface. Upload your screenshots to the `screenshots` directory of your project, and reference them here using Markdown:
 
-- **Home Screen**:
-  ![Home Screen](screenshots/home_screen.png)
+  ![First]((https://github.com/SagarRB123/Medical-Emergency-Handling/blob/main/Page1.png?raw=true))
 
-- **Find Hospitals**:
-  ![Find Hospitals](screenshots/find_hospitals.png)
+  ![Second](screenshots/find_hospitals.png)
 
-- **First Aid Assistance**:
-  ![First Aid](screenshots/first_aid.png)
+  ![Third](screenshots/first_aid.png)
 
 ---
 
