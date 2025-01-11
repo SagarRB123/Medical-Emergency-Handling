@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="Nearby Hospitals"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <EditText
+        android:id="@+id/search_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search for specific hospitals (e.g., 'eye')"
+        android:padding="8dp"
+        android:background="@drawable/search_background"
+        android:layout_margin="8dp"
+        android:imeOptions="actionSearch"
+        android:inputType="text" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map_fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hospitals_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/listviewbackground"
+        android:clipToPadding="false"
+        android:padding="8dp" />
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".OTPActivity">
+
+    <ImageView
+        android:id="@+id/OTPImage"
+        android:layout_width="279dp"
+        android:layout_height="213dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/phoneverificationlogo2" />
+
+    <TextView
+        android:id="@+id/phoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify +919846857484"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/OTPImage"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/OTPImage"
+        app:layout_constraintTop_toBottomOf="@+id/OTPImage" />
+
+    <TextView
+        android:id="@+id/OTPHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Enter the OTP code to verify your phone number"
+        android:textColor="#686363"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/phoneLabel"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/phoneLabel"
+        app:layout_constraintTop_toBottomOf="@+id/phoneLabel" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OTPHint"
+        android:id="@+id/OTPBox">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <com.mukeshsolanki.OtpView
+                android:id="@+id/otp_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:inputType="number"
+                android:itemBackground="#F4F1F1"
+                android:textAllCaps="true"
+                app:OtpItemCount="6"
+                app:OtpLineColor="@color/green"
+                app:OtpViewType="line" />
+
+            <TextView
+                android:id="@+id/ResendOTPText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:paddingTop="8dp"
+                android:paddingEnd="30dp"
+                android:text="Resend OTP!" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
