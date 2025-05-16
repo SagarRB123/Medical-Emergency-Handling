@@ -110,6 +110,12 @@ After generating the keys, replace the placeholder keys in the project code with
 
   ![Sixth](https://github.com/SagarRB123/Medical-Emergency-Handling/blob/main/Page6.png?raw=true)
 
+  ![Seventh](https://github.com/SagarRB123/Medical-Emergency-Handling/blob/main/Page-7.png?raw=true)
+
+  ![Eighth](https://github.com/SagarRB123/Medical-Emergency-Handling/blob/main/Page-8.png?raw=true)
+
+  ![Ninth](https://github.com/SagarRB123/Medical-Emergency-Handling/blob/main/Page-9.png?raw=true)
+
 ---
 
 ## Contribution
