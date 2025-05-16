@@ -5,7 +5,7 @@ public class HospitalInfo {
     private String vicinity;
     private double latitude;
     private double longitude;
-    private String reference;
+    private String reference; // This will contain the place_id
 
     public HospitalInfo(String name, String vicinity, double latitude, double longitude, String reference) {
         this.name = name;

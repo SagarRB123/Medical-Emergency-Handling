@@ -218,14 +218,56 @@
 
         </androidx.cardview.widget.CardView>
 
-        <!-- Health Articles -->
+        <!-- Medical ID -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/MedicalId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/id_card" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Medical ID"
+                    android:textColor="#00796B"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- First Aid -->
         <androidx.cardview.widget.CardView
             android:id="@+id/PrimaryAid"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_row="2"
             android:layout_rowWeight="1"
-            android:layout_column="0"
+            android:layout_column="1"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:clickable="true"
@@ -252,50 +294,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="First Aid "
+                    android:text="First Aid"
                     android:textColor="@color/orange_700"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <!-- My Orders -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/MyOrders"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_row="2"
-            android:layout_rowWeight="1"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <pl.droidsonroids.gif.GifImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:src="@drawable/order" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="My Orders"
-                    android:textColor="@color/teal_700"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -344,9 +344,9 @@
 
         </androidx.cardview.widget.CardView>
 
-        <!-- Logout -->
+        <!-- My Orders -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/Logout"
+            android:id="@+id/MyOrders"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_row="3"
@@ -371,15 +371,15 @@
                 <pl.droidsonroids.gif.GifImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/logout1" />
+                    android:src="@drawable/order" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Logout"
-                    android:textColor="@color/gray_700"
+                    android:text="My Orders"
+                    android:textColor="@color/teal_700"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -387,5 +387,63 @@
         </androidx.cardview.widget.CardView>
 
     </GridLayout>
+
+    <!-- Logout as a Horizontal Rectangle -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/logout1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Logout"
+                android:textColor="@color/gray_700"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/showMessageChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="85dp"
+        android:src="@drawable/chatbot_image"
+        app:backgroundTint="@color/white"
+        app:borderWidth="0dp"
+        app:elevation="10dp"
+        app:fabCustomSize="70dp"
+        app:maxImageSize="50dp"
+        app:tint="@null" />
 
 </RelativeLayout>

@@ -12,6 +12,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
 
     <application
         android:allowBackup="true"
@@ -24,16 +26,34 @@
         android:theme="@style/Theme.Medical_Emergency_Handling"
         tools:targetApi="31">
         <activity
+            android:name=".MedicalIdCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MedicalIdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Ambulance.AmbulanceDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Ambulance.AmbulanceMapsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Hospital.HospitalDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatBot.ChatMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignInMethodActivity"
             android:exported="false" />
         <activity
             android:name=".OTPActivity"
             android:exported="false"
-            android:windowSoftInputMode="stateVisible"/>
+            android:windowSoftInputMode="stateVisible" />
         <activity
             android:name=".PhoneNumberActivity"
             android:exported="false"
-            android:windowSoftInputMode="stateVisible"/>
+            android:windowSoftInputMode="stateVisible" />
         <activity
             android:name=".WebViewActivity"
             android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
@@ -47,8 +67,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="Your_API_KEY" />        <!--  Place your API_KEY here -->
-
+            android:value="AIzaSyC1Gxoe36CDLwdf3GOr9gUjiSGY9h_ZqJY" /> <!-- Place your API_KEY here -->
         <activity
             android:name=".Hospital.GoogleMapsActivity"
             android:exported="false"

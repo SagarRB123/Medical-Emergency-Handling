@@ -1,5 +1,7 @@
 package com.example.medical_emergency_handling.Hospital;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,7 @@ import java.util.List;
 public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.HospitalViewHolder> {
     private List<HospitalInfo> hospitals;
     private OnHospitalClickListener listener;
+    private Context context;
 
     public interface OnHospitalClickListener {
         void onHospitalClick(HospitalInfo hospital);
@@ -25,7 +28,8 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.Hospit
     @NonNull
     @Override
     public HospitalViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
+        context = parent.getContext();
+        View view = LayoutInflater.from(context)
                 .inflate(R.layout.hospital_item, parent, false);
         return new HospitalViewHolder(view);
     }
@@ -35,10 +39,19 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.Hospit
         HospitalInfo hospital = hospitals.get(position);
         holder.nameTextView.setText(hospital.getName());
         holder.vicinityTextView.setText(hospital.getVicinity());
+
+        // Set click listener for the item view
         holder.itemView.setOnClickListener(v -> {
+            // Call the interface method for map centering
             if (listener != null) {
                 listener.onHospitalClick(hospital);
             }
+
+            // Launch the details activity
+            Intent intent = new Intent(context, HospitalDetailsActivity.class);
+            intent.putExtra("place_id", hospital.getReference());
+            intent.putExtra("hospital_name", hospital.getName());
+            context.startActivity(intent);
         });
     }
 
@@ -57,5 +70,4 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.Hospit
             vicinityTextView = itemView.findViewById(R.id.hospital_vicinity);
         }
     }
-
 }

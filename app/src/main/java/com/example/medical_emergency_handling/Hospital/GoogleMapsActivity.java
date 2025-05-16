@@ -129,7 +129,7 @@ public class GoogleMapsActivity extends FragmentActivity implements
             googleURL.append("&keyword=").append(userKeyword); // Add user-provided keyword
         }
         googleURL.append("&sensor=true");
-        googleURL.append("&key=").append("Your_API_KEY");   //  Place your API_KEY here
+        googleURL.append("&key=").append("AlzaSyVTHHXZc8D2SjyMz-oAxS7kcRneXppdvVB");   //  Place your API_KEY here
 
         Log.d("GoogleMapsActivity", "url = " + googleURL.toString());
         return googleURL.toString();

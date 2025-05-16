@@ -1,23 +1,19 @@
 package com.example.medical_emergency_handling;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
-
+import android.widget.Toast;
 import com.hbb20.CountryCodePicker;
 
 public class PhoneNumberActivity extends AppCompatActivity {
-
     private EditText phoneBox;
     private Button continueBtn;
-    CountryCodePicker countryCodePicker;
-
+    private CountryCodePicker countryCodePicker;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -32,17 +28,14 @@ public class PhoneNumberActivity extends AppCompatActivity {
         phoneBox.requestFocus();
 
         countryCodePicker.registerCarrierNumberEditText(phoneBox);
-        continueBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!countryCodePicker.isValidFullNumber()) {
-                    phoneBox.setError("Invalid phone number");
-                    return;
-                }
-                Intent intent = new Intent(PhoneNumberActivity.this, OTPActivity.class);
-                intent.putExtra("phoneNumber", countryCodePicker.getFullNumberWithPlus());
-                startActivity(intent);
+        continueBtn.setOnClickListener(v -> {
+            if (!countryCodePicker.isValidFullNumber()) {
+                phoneBox.setError("Invalid phone number");
+                return;
             }
+            Intent intent = new Intent(PhoneNumberActivity.this, OTPActivity.class);
+            intent.putExtra("phoneNumber", countryCodePicker.getFullNumberWithPlus());
+            startActivity(intent);
         });
     }
 }

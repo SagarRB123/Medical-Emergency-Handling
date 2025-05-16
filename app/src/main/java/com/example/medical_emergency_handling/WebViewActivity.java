@@ -41,7 +41,7 @@ public class WebViewActivity extends AppCompatActivity {
     private void initializeViews() {
         webView = findViewById(R.id.webView);
         progressBar = findViewById(R.id.progressBar);
-        toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar_chat);
     }
 
     private void setupToolbar() {
